@@ -1,6 +1,7 @@
 ---
 title: Windows Terminal 配置美化过程
 date: 2021-02-23 10:57:55
+updated: 2021-03-10 20:24:00
 tags: 技术
 categories:
  - [Windows, Terminal]
@@ -42,6 +43,19 @@ PSReadLine是一个用于增强PowerShell命令行编辑体验的模块，其安
 ```powershell
 Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 ```
+
+### 1.3 oh-my-posh更新问题 (2021/03/10更新)
+
+近期，`oh-my-posh`更新至version 3. `Set-Theme Agnoster`命令已经被弃用，改为了:
+
+```powershell
+Set-PoshPrompt -Theme agnoster
+```
+
+其次，根据官网文档可知，使用`oh-my-posh`必须使用其规定字体，下文中Windows Terminal使用的`Fira Code`无法使用。
+
+> To see the icons displayed in Oh my Posh, install and configure your terminal to use a powerline enabled font. The fonts we use are patched by Nerd Fonts, which offer a maximum of icons you can use.
+> Oh my Posh was designed using Meslo LGM NF, but any Nerd Font should be compatible with the standard themes.
 
 ## 2. 配置
 
